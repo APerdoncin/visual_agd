@@ -19,6 +19,39 @@ output:
 # csl: population-en-custom.csl
 ---
 
+```{r setup, include=FALSE}
+
+source("../scripts/00-setup.R", local = knitr::knit_global())
+
+```
+
+```{r data}
+
+d <- read_csv2("data/FD_csv_EEC18.csv") %>% 
+  rename_all(tolower)
+
+
+interim <- d %>% 
+filter(acteu == 1, #  on ne conserve que les actifs occupés
+       statut == 21, # et les intérimaires
+       chpub != 7) # et on enlève les salariés de particuliers employeurs
+
+d_acm <- interim %>% 
+  select("age", "genre", "diplome", "nationalite", "gsp", "sociopro", "menage", 
+         "position", "choix", "horaires", "heures_plus", 
+         "public_prive", "secteur") %>% 
+  mutate_all(factor) %>%  
+  drop_na()
+
+```
+
+```{r recode, include=FALSE}
+
+source("../scripts/02-recode.R", local = knitr::knit_global())
+
+```
+
+
 # Introduction
 
 ### Objectifs
@@ -31,15 +64,19 @@ output:
 
 ### Avant de commencer
 
-+ Rendez-vous sur le dépôt GitHub dédié à cette présentation : https://github.com/APerdoncin/visual_agd
++ Rendez-vous sur le **dépôt GitHub** dédié à cette présentation : https://github.com/APerdoncin/visual_agd
 
 + Les usagers de GitHub peuvent cloner le dépôt sur leur ordinateur (git clone ...)
 
 + Les autres peuvent simplement télécharger le contenu du dépôt et le copier dans un dossier dédié sur leur ordinateur (Code > Download ZIP)
 
-+ Deux scripts à exécuter :
++ **Deux scripts à exécuter** :
 
-  + 00_setup : packages (à installer éventuellement) et options
+  + 00-setup : packages (à installer éventuellement) et options
+  + 01-data : téléchargement, "dézipage" et importation des données de l'EEC 2018
+
+
+
 
 ### This is the end !
 
