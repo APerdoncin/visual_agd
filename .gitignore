@@ -6,8 +6,9 @@
 .RData
 
 # zip and csv files
-data/*.csv
-data/zip/*.zip
+data_brut/*.csv
+data_prod/*.csv
+data_brut/zip/*.zip
 
 # User-specific files
 .Ruserdata
