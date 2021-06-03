@@ -22,6 +22,6 @@ unzip(zipfile = "data_brut/zip/archive.zip",
 
 # Importer le fichier csv
 
-d <- read_csv2("data/FD_csv_EEC18.csv") %>% 
+d <- read_csv2("data_brut/FD_csv_EEC18.csv") %>% 
   rename_all(tolower) # pour que les noms des variables soient minuscule
 
