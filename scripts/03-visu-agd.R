@@ -61,7 +61,7 @@ variances %>%
   set_caption("Valeurs propres et variances le long des axes")
 
 # pour exporter ce tableau, plusieurs solutions possibles, notamment : 
-write_csv2(variances, path = "variances.csv")
+write_csv2(variances, "sorties/tab-variances.csv")
 
 
 # Diagrammes des sauts de variance ----
@@ -74,6 +74,7 @@ ggplot(variances, aes(x = Axes)) + # initialisation du graphique et de l'axe hor
   ylab("% de variance") + # on renomme proprement le label de l'axe des y
   theme_minimal() # un des thèmes possibles dans ggplot, que j'aime bien car il est... minimaliste !
 
+# % cumulé de variance
 
 ggplot(variances, aes(x = Axes)) +
   geom_bar(aes(y = `% cumulé de variance`), 
@@ -90,29 +91,32 @@ seuil <- 100 / nrow(res_acm$var$coord)
 # Ce seuil est bien évidemment arbitraire, on ne discutera pas ici de ce point. Le seuil ici retenu est la contribution moyenne (1 / nombre de modalités actives). Le principe est simple : une modalité est dite "contributive" si elle "pèse" plus lourd sur un axe que son poids moyen dans l'ensemble du nuage d'origine. 
 
 
+# MISE EN FORME DES RESULTATS STATISTIQUES ----
 
-# 5. MISE EN FORME DES RESULTATS STATISTIQUES ----
-
-# L'objectif est de parvenir à créer un grand tableau qui contient autant de lignes que de modalités actives et/ou supplémentaires. Chacune de ces modalités est décrite par sa fréquence dans le jeu de données, et par les indicateurs usuels de l'AGD pour les premiers axes factoriels (contribution, coordonnée, cosinus carré, v.test).
+# L'objectif est de parvenir à créer un grand tableau qui contienne autant de lignes que de modalités actives et/ou supplémentaires. Chacune de ces modalités est décrite par sa fréquence dans le jeu de données, et par les indicateurs usuels de l'AGD pour les premiers axes factoriels (contribution, coordonnée, cosinus carré, v.test).
 
 # Ce tableau peut être exporté dans un tableur afin de servir de support à l'interprétation des axes. Rappelons que l'interprétation statistique des axes doit impérativement précéder l'interprétation graphique, faute de quoi on s'expose à commettre de grosses erreurs d'interprétation. 
 
 # Ce tableau peut aussi, en étant légèrement mis en forme, être utilisé dans une annexe de mémoire, de thèse, ou dans une publication. Pour la raison évoquée dans le paragraphe précédent, cela devrait même être obligatoire... 
 
 
-# 5.1. Fréquences modalités actives et supplémentaires ----
+# Fréquences des modalités actives et supplémentaires ----
+
 # Première étape : récupérer les fréquences de chaque modalité. ce faisant (grâce à la fonction map), on récupère aussi la liste de toutes les modalités du jeu de données, ainsi que les variables auxquelles elles appartiennent. Ce sera très utile plus bas pour dessiner des symboles différents par variable... 
 
-frequences <- gather(d_acm, variables, modalites) %>% # étendre le jeu de données par variable et modalité
+frequences <- gather(d_acm, names_to = modalites, values_to)
+
+frequences <- d_acm %>% 
+  pivot_longer(everything(),
+               names_to = "variables", 
+               values_to = "modalites") %>%  # compter toutes les occurences des couples variable/modalite
   count(variables, modalites) %>% # compter le nombre de couples "variable/modalité" unique (donc le nombre d'individus par modalité du jeu de données)
   group_by(variables) %>% 
   mutate(pourcentage = round(100 * n / nrow(d_acm), 1)) %>% # calculer des pourcentages pour chaque groupe de variable
   ungroup() %>% 
   select(variables, modalites, n, pourcentage)  # sélectionner les variables dans un ordre plus lisible
 
-# Le message d'alerte "attributes are not identical..." est généré par la fonction gather, et sans importance.
-
-write_csv2(frequences, path = "frequences.csv")
+write_csv2(frequences, "sorties/tab-frequences.csv")
 
 # 5.2. Modalités actives ----
 # Deuxième étape : récupérer les indicateurs statistiques des modalités actives.

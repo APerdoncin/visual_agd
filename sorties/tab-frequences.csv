@@ -1,0 +1,68 @@
+variables;modalites;n;pourcentage
+age;+50a;786;17,0
+age;15-29a;1859;40,1
+age;30-39a;1116;24,1
+age;40-49a;871;18,8
+choix;Contrat choisi;1925;41,6
+choix;Contrat subi;2707;58,4
+diplome;Bac général;251;5,4
+diplome;Bac techno/pro;889;19,2
+diplome;Brevet collèges ou CEP;358;7,7
+diplome;CAP/BEP;1554;33,5
+diplome;L2 ou équiv;437;9,4
+diplome;L3 et sup;315;6,8
+diplome;Sans diplôme;828;17,9
+genre;Femmes;1355;29,3
+genre;Hommes;3277;70,7
+gsp;CPIS;56;1,2
+gsp;Employé-e-s;621;13,4
+gsp;Ouvriers;3519;76,0
+gsp;Professions intermédiaires;436;9,4
+heures_plus;Souhaite pas plus d'heures;3159;68,2
+heures_plus;Souhaite plus d'heures;1473;31,8
+horaires;Pas d'horaire habituel;730;15,8
+horaires;Temps complet -35h;116;2,5
+horaires;Temps complet +40h;692;14,9
+horaires;Temps complet 35-39h;2712;58,5
+horaires;Temps partiel;382;8,2
+menage;Autres ménages;232;5,0
+menage;Couple avec enfant(s);2293;49,5
+menage;Couple sans enfant;711;15,3
+menage;Famille monoparentale;648;14,0
+menage;Personne seule;748;16,1
+nationalite;Etrangers;595;12,8
+nationalite;Français de naissance;3799;82,0
+nationalite;Français naturalisés;238;5,1
+position;Agents maîtrise, ingénieurs, cadres;119;2,6
+position;Autres, nr;1012;21,8
+position;Employés;748;16,1
+position;Manoeuvres ou OS;1410;30,4
+position;Ouvriers qual, techniciens d'atelier;1139;24,6
+position;Techniciens;204;4,4
+public_prive;Employeur privé;4450;96,1
+public_prive;Employeur public;182;3,9
+secteur;Activ admin scientifqs et technqs;312;6,7
+secteur;Admin publiques;185;4,0
+secteur;Autres secteurs;438;9,5
+secteur;Commerce;488;10,5
+secteur;Construction;689;14,9
+secteur;Energie, eau, déchets, dépol;150;3,2
+secteur;Fab autres prod indus;788;17,0
+secteur;Fab élec, info, machines;250;5,4
+secteur;Fab matériel transp;373;8,1
+secteur;Fabrication alimentaire et tabacs;339;7,3
+secteur;Héberg et restauration;97;2,1
+secteur;Transports et entreposage;523;11,3
+sociopro;Cadres et autres professions intermédiaires;157;3,4
+sociopro;Chauffeurs;169;3,6
+sociopro;Employés admin du privé;183;4,0
+sociopro;Employés commerciaux du privé;165;3,6
+sociopro;Employés du public;151;3,3
+sociopro;Employés services aux particuliers;122;2,6
+sociopro;Ouvriers non qual artisanat et agric;320;6,9
+sociopro;Ouvriers non qual industrie;1522;32,9
+sociopro;Ouvriers qual artisanat;430;9,3
+sociopro;Ouvriers qual industrie;662;14,3
+sociopro;Ouvriers qual manut, magasin, transport;416;9,0
+sociopro;Professions intermédiaires du privé;124;2,7
+sociopro;Technicien-ne-s;211;4,6
