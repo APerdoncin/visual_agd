@@ -6,8 +6,8 @@
 .RData
 
 # zip and csv files
-.csv
-.zip
+data/*.csv
+data/zip/*.zip
 
 # User-specific files
 .Ruserdata
