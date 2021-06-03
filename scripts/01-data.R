@@ -7,13 +7,14 @@
 
 url <- "https://www.insee.fr/fr/statistiques/fichier/4191029/fd_eec18_csv.zip"
 path_zip <- "data/zip"
+path_unzip <- "data"
 destfile <- "archive.zip"
 
 # Télécharger le fichier zip
 
 curl_download(url, destfile = paste(path_zip, destfile, sep = "/"))
 
-# Dé-ziper dnas le dossier dat
+# Dé-ziper dans le dossier dat
 
 unzip(zipfile = "data/zip/archive.zip", 
       exdir = path_unzip)
