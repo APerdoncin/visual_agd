@@ -116,38 +116,52 @@ frequences <- d_acm %>%
   ungroup() %>% 
   select(variables, modalites, n, pourcentage)  # sélectionner les variables dans un ordre plus lisible
 
+frequences %>% 
+  flextable() %>% 
+  colformat_double(decimal.mark = ",", digits = 1) %>% 
+  autofit() %>% 
+  set_caption("Tableau de fréquence de l'ensemble des variables du jeu de données")
+
 write_csv2(frequences, "sorties/tab-frequences.csv")
 
-# 5.2. Modalités actives ----
+
+# Modalités actives ----
+
 # Deuxième étape : récupérer les indicateurs statistiques des modalités actives.
 
 # Coordonnées (modalités actives) ----
-coordonnees <- as.data.frame(round(res_acm$var$coord, 2)) %>% # récupérer les coordonnées des modalités actives et arrondir à deux décimales (c'est bien suffisant)
+
+coordonnees <- as_tibble(res_acm$var$coord,
+                         rownames = "modalites") %>%  # récupérer les coordonnées des modalités actives
+  mutate_if(is.numeric, round, digits = 2) %>%  # arrondir à 2 décimales les variables numériques (c'est bien suffisant)
   rename_all(tolower) %>% # tout en minuscules
   rename_all(~ str_replace(., " ", "")) %>% # renommer les variables en supprimant les espaces : par exemple : "dim 1" devient "dim1" 
-  rename_all(~ str_c(., "coord", sep = "_")) %>% # ajouter le suffixe _coord à chaque nom de variable. On obtient ainsi par exemple "dim1_coord"
-  mutate(modalites = rownames(.)) # récupérer les noms des modalités, stockées dans le nom des lignes de res_acm$var$coord
+  rename_if(is.numeric, ~ str_c(., "coord", sep = "_")) # ajouter le suffixe _coord à chaque nom de variable (sauf la variable modalites). On obtient ainsi par exemple "dim1_coord"
 
 # Contributions (modalités actives) ----
-contributions <- as.data.frame(round(res_acm$var$contrib, 2))  %>% 
-  rename_all(tolower) %>% 
-  rename_all(~ str_replace(., " ", "")) %>% 
-  rename_all(~ str_c(., "contrib", sep = "_")) %>% # idem sauf qu'ici on obtient "dim1_contrib"
-  mutate(modalites = rownames(.))
+contributions <- as_tibble(res_acm$var$contrib,
+                           rownames = "modalites") %>%  # récupérer les coordonnées des modalités actives
+  mutate_if(is.numeric, round, digits = 2) %>%  # arrondir à 2 décimales les variables numériques (c'est bien suffisant)
+  rename_all(tolower) %>% # tout en minuscules
+  rename_all(~ str_replace(., " ", "")) %>% # renommer les variables en supprimant les espaces : par exemple : "dim 1" devient "dim1" 
+  rename_if(is.numeric, ~ str_c(., "contrib", sep = "_")) # idem sauf qu'ici on obtient "dim1_contrib"
 
 # Cosinus carrés (modalités actives) ----
-cos2 <- as.data.frame(round(res_acm$var$cos2, 2)) %>% 
-  rename_all(tolower) %>%
-  rename_all(~ str_replace(., " ", "")) %>% 
-  rename_all(~ str_c(., "cos2", sep = "_")) %>% # idem avec "cos2" 
-  mutate(modalites = rownames(.))
+cos2 <- as_tibble(res_acm$var$cos2,
+                   rownames = "modalites") %>%  # récupérer les coordonnées des modalités actives
+  mutate_if(is.numeric, round, digits = 2) %>%  # arrondir à 2 décimales les variables numériques (c'est bien suffisant)
+  rename_all(tolower) %>% # tout en minuscules
+  rename_all(~ str_replace(., " ", "")) %>% # renommer les variables en supprimant les espaces : par exemple : "dim 1" devient "dim1" 
+  rename_if(is.numeric, ~ str_c(., "cos2", sep = "_")) # idem sauf qu'ici on obtient "dim1_cos2"
+
 
 # vtest (modalités actives) ----
-vtest <- as.data.frame(round(res_acm$var$v.test, 2)) %>% 
-  rename_all(tolower) %>%
-  rename_all(~ str_replace(., " ", "")) %>% 
-  rename_all(~ str_c(., "vtest", sep = "_")) %>% # idem avec vtest
-  mutate(modalites = rownames(.))
+vtest <- as_tibble(res_acm$var$v.test,
+                   rownames = "modalites") %>%  # récupérer les coordonnées des modalités actives
+  mutate_if(is.numeric, round, digits = 2) %>%  # arrondir à 2 décimales les variables numériques (c'est bien suffisant)
+  rename_all(tolower) %>% # tout en minuscules
+  rename_all(~ str_replace(., " ", "")) %>% # renommer les variables en supprimant les espaces : par exemple : "dim 1" devient "dim1" 
+  rename_if(is.numeric, ~ str_c(., "vtest", sep = "_")) # idem sauf qu'ici on obtient "dim1_vtest"
 
 # Assemblage des résultats statistiques (modalités actives) ----
 
@@ -172,32 +186,45 @@ resultats_actives <- frequences %>%
                                 "Public/Privé" = "public_prive", 
                                 "Secteur d'activité" = "secteur"))
 
-write_csv2(resultats_actives, path = "resultats_actives.csv")
 
-# 5.3. Modalités supplémentaires ----
+resultats_actives %>% 
+  flextable() %>% 
+  colformat_double(decimal.mark = ",", digits = 1) %>% 
+  autofit() %>% 
+  set_caption("Résultats statistiques variables activess")
+
+
+write_csv2(resultats_actives, path = "sorties/tab-resultats_actives.csv")
+
+
+# Modalités supplémentaires ----
 
 # Coordonnées (modalités supplémentaires) ----
-coordonnees_sup <- as.data.frame(round(res_acm$quali.sup$coord, 2)) %>% # la démarche est la même que supra, mais avec le sous-objet quali.sup qui stocke les informations sur les variables qualitatives supplémentaires
-  rename_all(tolower) %>%
-  rename_all(~ str_replace(., " ", "")) %>% 
-  rename_all(~ str_c(., "coord", sep = "_")) %>% 
-  mutate(modalites = rownames(.))
 
-# Cosinus carrés (modalités supplémentaires) ----
-cos2_sup <- as.data.frame(round(res_acm$quali.sup$cos2, 2)) %>% 
+coordonnees_sup <- as_tibble(res_acm$quali.sup$coord,
+                         rownames = "modalites") %>%  # la démarche est la même que supra, mais avec le sous-objet quali.sup qui stocke les informations sur les variables qualitatives supplémentaires
+  mutate_if(is.numeric, round, digits = 2) %>%  
   rename_all(tolower) %>%
-  rename_all(~ str_replace(., " ", "")) %>% 
-  rename_all(~ str_c(., "cos2", sep = "_")) %>% 
-  mutate(modalites = rownames(.))
+  rename_all(~ str_replace(., " ", "")) %>%
+  rename_if(is.numeric, ~ str_c(., "coord", sep = "_"))
 
-# vtest (modalités supplémentaires) ----
-vtest_sup <- as.data.frame(round(res_acm$quali.sup$v.test, 2)) %>% 
+# Cosinus carrés (modalités actives) ----
+cos2_sup <- as_tibble(res_acm$quali.sup$cos2,
+                  rownames = "modalites") %>%  
+  mutate_if(is.numeric, round, digits = 2) %>% 
+  rename_all(tolower) %>% 
+  rename_all(~ str_replace(., " ", "")) %>%
+  rename_if(is.numeric, ~ str_c(., "cos2", sep = "_")) 
+
+# vtest (modalités actives) ----
+vtest_sup <- as_tibble(res_acm$quali.sup$v.test,
+                   rownames = "modalites") %>% 
+  mutate_if(is.numeric, round, digits = 2) %>% 
   rename_all(tolower) %>%
-  rename_all(~ str_replace(., " ", "")) %>% 
-  rename_all(~ str_c(., "vtest", sep = "_")) %>% 
-  mutate(modalites = rownames(.))
+  rename_all(~ str_replace(., " ", "")) %>%
+  rename_if(is.numeric, ~ str_c(., "vtest", sep = "_")) 
 
-# Assemblage du tableau des résultats (modalités supplémentaires) ----
+# Assemblage des résultats statistiques (modalités actives) ----
 
 resultats_sup <- frequences %>% 
   right_join(coordonnees_sup) %>% 
@@ -212,16 +239,23 @@ resultats_sup <- frequences %>%
                                 "Catégorie socio-professionnelle" = "sociopro", 
                                 "Type de ménage" = "menage"))
 
-# 5.4. Assemblage du tableau complet de résultats (variables actives et supplémentaires) ----
+resultats_sup %>% 
+  flextable() %>% 
+  colformat_double(decimal.mark = ",", digits = 1) %>% 
+  autofit() %>% 
+  set_caption("Résultats statistiques variables supplémentaires")
+
+
+write_csv2(resultats_actives, path = "sorties/tab-resultats_actives.csv")
+
+# Assemblage du tableau complet de résultats (variables actives et supplémentaires) ----
 
 # On colle les lignes des tableaux contenant tous les résultats statistiques des variables actives et supplémentaires. On a donc dans un seul et même objet toutes les informations nécessaires pour 1/ interpréter correctement les axes et 2/ faire de beaux graphiques !
 
 resultats_complet <- bind_rows(resultats_actives, resultats_sup)
 
-# le message d'alerte qui s'affiche n'est pas grave : il précise juste un risque de confusion due au fait que les variables ne sont pas toutes en format character.
 
-
-# 6. VISUALISATIONS GRAPHIQUES ----
+# VISUALISATIONS GRAPHIQUES ----
 
 # 6.1. Nuage des modalités actives ----
 
