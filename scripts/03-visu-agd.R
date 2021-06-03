@@ -257,7 +257,7 @@ resultats_complet <- bind_rows(resultats_actives, resultats_sup)
 
 # VISUALISATIONS GRAPHIQUES ----
 
-# 6.1. Nuage des modalités actives ----
+# Nuage des modalités actives ----
 
 # Nuage des modalités actives simple ----
 
@@ -276,12 +276,12 @@ resultats_actives %>%
   geom_hline(yintercept = 0, colour = "darkgrey", linetype="longdash") + # ligne horizontale y = 0
   geom_vline(xintercept = 0, colour = "darkgrey", linetype="longdash") + # ligne verticale x = 0
   
-  xlab(paste0("Axe 1 (", round(variances[1, 2], 1), " %)")) + # label de l'axe horizontal, qui intègre automatiquement le pourcentage de variance
-  ylab(paste0("Axe 2 (", round(variances[2, 2], 1), " %)")) + # idem pour l'axe vertical
+  xlab(paste0("Axe 1 (", round(variances[1, 3], 1), " %)")) + # label de l'axe horizontal, qui intègre automatiquement le pourcentage de variance
+  ylab(paste0("Axe 2 (", round(variances[2, 3], 1), " %)")) + # idem pour l'axe vertical
   
-  scale_shape_manual(name="", values = 0:20) + # sélection des types de symboles 
+  scale_shape_manual(name = "", values = 0:20) + # sélection des types de symboles 
   
-  guides(shape=guide_legend(title="")) + # paramètres de la légende : pas de titre
+  guides(shape=guide_legend(title = "")) + # paramètres de la légende : pas de titre
   
   theme_minimal() + # mise en forme globale du graphique ; theme_minimal est la plus "sobre" mais d'autres sont possibles... 
   
@@ -305,11 +305,11 @@ resultats_actives %>%
   geom_hline(yintercept = 0, colour = "darkgrey", linetype="longdash") +
   geom_vline(xintercept = 0, colour = "darkgrey", linetype="longdash") +
   
-  xlab(paste0("Axe 1 (", round(variances[1, 2], 1), " %)")) +
-  ylab(paste0("Axe 2 (", round(variances[2, 2], 1), " %)")) +
+  xlab(paste0("Axe 1 (", round(variances[1, 3], 1), " %)")) +
+  ylab(paste0("Axe 2 (", round(variances[2, 3], 1), " %)")) +
   
-  scale_shape_manual(name="", values = 0:20) +
-  guides(shape=guide_legend(title=""), size = FALSE) + # paramètres de la légende : pour ne pas que les échelles de taille s'affichent dans la légende
+  scale_shape_manual(name = "", values = 0:20) +
+  guides(shape=guide_legend(title = ""), size = FALSE) + # paramètres de la légende : pour ne pas que les échelles de taille s'affichent dans la légende
   
   theme_minimal() +
   theme(legend.position="bottom")
@@ -336,20 +336,20 @@ resultats_actives %>%
   geom_hline(yintercept = 0, colour = "darkgrey", linetype="longdash") +
   geom_vline(xintercept = 0, colour = "darkgrey", linetype="longdash") +
   
-  xlab(paste0("Axe 1 (", round(variances[1, 2], 1), " %)")) +
-  ylab(paste0("Axe 2 (", round(variances[2, 2], 1), " %)")) +
+  xlab(paste0("Axe 1 (", round(variances[1, 3], 1), " %)")) +
+  ylab(paste0("Axe 2 (", round(variances[2, 3], 1), " %)")) +
   
-  scale_shape_manual(name="", values = 0:20) +
-  scale_color_gradient(name="", 
-                       # low = "#FFCC33", high = "#FF3300" # enlever le commentaire pour un exemple de modification de couleur du gradient
+  scale_shape_manual(name = "", values = 0:20) +
+  scale_color_gradient(name = "", 
+                       low = "#FFCC33", high = "#FF3300" # un exemple de modification de couleur du gradient
   ) +
-  guides(shape=guide_legend(title=""), size = FALSE) + # paramètres de la légende : pour ne pas que les échelles de taille s'affichent dans la légende
+  guides(shape=guide_legend(title = "")) + 
   
   theme_minimal() +
   theme(legend.position="bottom")
 
 
-# 6.2. Nuage des modalités actives et supplémentaires ----
+# Nuage des modalités actives et supplémentaires ----
 
 resultats_complet %>% 
   filter(dim1_contrib > seuil |
@@ -381,7 +381,7 @@ resultats_complet %>%
   
   guides(shape = guide_legend(title="Nom des variables (actives et supplémentaires)", # titre de la légende des noms de variable
                               title.position = "top"), 
-         colour = guide_legend(title="Type de variable", # titre de la légende distinguant actives et supplémentaires
+         colour = guide_legend(title = "Type de variable", # titre de la légende distinguant actives et supplémentaires
                                title.position = "top",
                                nrow = 2),
          size = FALSE) + # toujours pas de légende pour les tailles de point
@@ -390,10 +390,10 @@ resultats_complet %>%
   theme(legend.position="bottom")
 
 
-# 6.3. Nuage des individus ----
+# Nuage des individus ----
 
 
-indiv12 <- as.data.frame(res_acm$ind$coord[,1:2]) # récupérer les coordonnées des individus sur les axes.
+indiv12 <- as_tibble(res_acm$ind$coord[,1:2]) # récupérer les coordonnées des individus sur les axes.
 
 ggplot(indiv12, aes(x = `Dim 1`, y = `Dim 2`)) + # initialisation du graphique 
   
@@ -403,15 +403,15 @@ ggplot(indiv12, aes(x = `Dim 1`, y = `Dim 2`)) + # initialisation du graphique
   geom_hline(yintercept = 0, colour = "darkgrey", linetype="longdash") +
   geom_vline(xintercept = 0, colour = "darkgrey", linetype="longdash") +
   
-  xlab(paste0("Axe 1 (", round(variances[1, 2], 1), " %)")) +
-  ylab(paste0("Axe 2 (", round(variances[2, 2], 1), " %)")) +
+  xlab(paste0("Axe 1 (", round(variances[1, 3], 1), " %)")) +
+  ylab(paste0("Axe 2 (", round(variances[2, 3], 1), " %)")) +
   
   guides(colour = FALSE) + # pas de légende pour le paramètre de couluer
   
   theme_minimal()
 
 
-# 6.4. Habillage du nuage des individus : points habillés selon le genre ----
+# Habillage du nuage des individus : points habillés selon le genre ----
 
 indiv12_genre <- d_acm %>% 
   select(genre) %>% 
@@ -426,8 +426,8 @@ ggplot(indiv12_genre, aes(x = `Dim 1`, y = `Dim 2`,
   geom_hline(yintercept = 0, colour = "darkgrey", linetype="longdash") +
   geom_vline(xintercept = 0, colour = "darkgrey", linetype="longdash") +
   
-  xlab(paste0("Axe 1 (", round(variances[1, 2], 1), " %)")) +
-  ylab(paste0("Axe 2 (", round(variances[2, 2], 1), " %)")) +
+  xlab(paste0("Axe 1 (", round(variances[1, 3], 1), " %)")) +
+  ylab(paste0("Axe 2 (", round(variances[2, 3], 1), " %)")) +
   
   scale_color_brewer(palette = "Set2") + # idem ici : tout est possible, à partir de RColorBrewer notamment. Voir display.brewer.all()
   
@@ -436,7 +436,7 @@ ggplot(indiv12_genre, aes(x = `Dim 1`, y = `Dim 2`,
   theme_minimal()
 
 
-# 6.5. Habillage du nuage des individus : points habillés et ellipses de concentration----
+# Habillage du nuage des individus : points habillés et ellipses de confiance ----
 
 ggplot(indiv12_genre, aes(x = `Dim 1`, y = `Dim 2`, 
                           colour = genre)) + 
@@ -449,8 +449,8 @@ ggplot(indiv12_genre, aes(x = `Dim 1`, y = `Dim 2`,
   geom_hline(yintercept = 0, colour = "darkgrey", linetype="longdash") +
   geom_vline(xintercept = 0, colour = "darkgrey", linetype="longdash") +
   
-  xlab(paste0("Axe 1 (", round(variances[1, 2], 1), " %)")) +
-  ylab(paste0("Axe 2 (", round(variances[2, 2], 1), " %)")) +
+  xlab(paste0("Axe 1 (", round(variances[1, 3], 1), " %)")) +
+  ylab(paste0("Axe 2 (", round(variances[2, 3], 1), " %)")) +
   
   scale_color_brewer(palette = "Set2") +
   
