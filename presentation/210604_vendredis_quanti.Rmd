@@ -1,0 +1,56 @@
+---
+title: "Représenter des analyses géométriques de données"
+header-includes:
+  - \titlegraphic{\centering \includegraphics[scale = 0.15]{logo-quantigre.png}}
+  - \renewcommand{\tablename}{Tableau}
+lang: "fr"
+subtitle: "Des résultats aux graphiques avec `R/RStudio` et `ggplot2`"
+author: "Anton Perdoncin"
+institute: "ERC Lubartworld, EHESS, Cens"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  beamer_presentation:
+    colortheme: beaver
+    slide_level: 3
+    theme: CambridgeUS
+    toc: yes
+  urlcolor: blue
+# bibliography: bibliographie.bib
+# csl: population-en-custom.csl
+---
+
+# Introduction
+
+### Objectifs
+
++ Montrer **comment réaliser**, avec R et RStudio, des **graphiques** et des **tableaux statistiques sur-mesure**, permettant de présenter et visualiser les résultats d’une analyse géométrique des données.
+
++ Donner un exemple d'**espace de travail quantitatif reproductible**.
+
++ Plaider pour l'usage des solutions de **contrôle de version `git`** (intégré à RStudio).
+
+### Avant de commencer
+
++ Rendez-vous sur le dépôt GitHub dédié à cette présentation : https://github.com/APerdoncin/visual_agd
+
++ Les usagers de GitHub peuvent cloner le dépôt sur leur ordinateur (git clone ...)
+
++ Les autres peuvent simplement télécharger le contenu du dépôt et le copier dans un dossier dédié sur leur ordinateur (Code > Download ZIP)
+
++ Deux scripts à exécuter :
+
+  + 00_setup : packages (à installer éventuellement) et options
+
+### This is the end !
+
+Merci de votre attention !
+
+\bigskip 
+
+**Mail** : anton.perdoncin@ehess.fr
+
+**Twitter** : [\@AntonPerdoncin](https://twitter.com/AntonPerdoncin)
+
+**GitHub** : https://github.com/APerdoncin
+
+### Bibliographie {.allowframebreaks}
