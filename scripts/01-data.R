@@ -6,8 +6,8 @@
 # Définir les liens de téléchargement et d'extraction des données
 
 url <- "https://www.insee.fr/fr/statistiques/fichier/4191029/fd_eec18_csv.zip"
-path_zip <- "data/zip"
-path_unzip <- "data"
+path_zip <- "data_brut/zip"
+path_unzip <- "data_brut"
 destfile <- "archive.zip"
 
 # Télécharger le fichier zip
@@ -16,7 +16,7 @@ curl_download(url, destfile = paste(path_zip, destfile, sep = "/"))
 
 # Dé-ziper dans le dossier dat
 
-unzip(zipfile = "data/zip/archive.zip", 
+unzip(zipfile = "data_brut/zip/archive.zip", 
       exdir = path_unzip)
 
 

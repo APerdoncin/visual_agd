@@ -181,4 +181,4 @@ interim_extr <- interim %>%
     age, genre, diplome, nationalite, gsp, sociopro, menage,
     position, choix, horaires, heures_plus,
     nafg017un, secteur) %>% 
-  write_csv2("data/ee18_extraits_recode.csv")
+  write_csv2("data_prod/ee18_extraits_recode.csv")
