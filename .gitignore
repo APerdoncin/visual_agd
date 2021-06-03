@@ -5,6 +5,10 @@
 # Session Data files
 .RData
 
+# zip and csv files
+.csv
+.zip
+
 # User-specific files
 .Ruserdata
 
