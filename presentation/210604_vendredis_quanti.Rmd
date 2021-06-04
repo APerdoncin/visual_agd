@@ -29,8 +29,8 @@ output:
     theme: CambridgeUS
     toc: yes
   urlcolor: blue
-# bibliography: bibliographie.bib
-# csl: population-en-custom.csl
+bibliography: "/home/moi/documents/presentations/2021/visual_agd/bibliographie/biblio_pres.bib"
+csl: "/home/moi/documents/presentations/2021/visual_agd/bibliographie/population.csl"
 ---
 
 ```{r setup, echo = FALSE, include = FALSE}
@@ -55,6 +55,7 @@ d_acm <- d %>%
   mutate_all(factor) %>%  
   drop_na()
 ```
+
 
 # Introduction {-}
 
@@ -132,7 +133,7 @@ Analyses géométriques des données incluent notamment :
 + Classifications (ascendantes hiérarchies notamment, CAH)
 + Analyse factorielle de tableaux multiples (AFM), etc.
 
-Un principe et résultat commun : fournir la **meilleure description possible des corrélations** dans un jeu de données.  Volle, 1997 ; Cibois, 2000 ; Le Roux et Rouanet, 2014 (REF)
+Un principe et résultat commun : fournir la **meilleure description possible des corrélations** dans un jeu de données. [@Volle1997; @Cibois2000; @LeRoux2014]
 
 ### Résumer l'information le mieux possible
 
@@ -155,7 +156,7 @@ Un principe et résultat commun : fournir la **meilleure description possible de
 + A **deux condition** :
 
   + que le graphique soit démonstratif ;
-  + que l'on prenne garde aux erreurs d'interprétations graphiques (Cibois, 1997).
+  + que l'on prenne garde aux erreurs d'interprétations graphiques [@Cibois1997].
   
 # Quelques règles pratiques
 
@@ -535,4 +536,4 @@ Merci de votre attention !
 
 **GitHub** : https://github.com/APerdoncin
 
-### Bibliographie {-} {.allowframebreaks}
+### Bibliographie {.allowframebreaks}
