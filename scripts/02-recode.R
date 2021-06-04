@@ -2,7 +2,7 @@
 # SELECTIONNER ET RECODER LES VARIABLES
 # (Anton Perdoncin, EHESS, ERC Lubartworld)
 ##################################################
-  
+
 # VARIABLE SOCIOPRO et DEMO ---- 
 
 # Age de PI ----
@@ -170,15 +170,5 @@ freq(d$secteur)
 interim <- d %>% 
 filter(acteu == 1, #  on ne conserve que les actifs occupés
        statut == 21, # et les intérimaires
-       chpub != 7) # et on enlève les salariés de particuliers employeurs
-  
-
-
-# EXPORT DONNEES RECODEES ----
-
-interim_extr <- interim %>% 
-  select(
-    age, genre, diplome, nationalite, gsp, sociopro, menage,
-    position, choix, horaires, heures_plus,
-    nafg017un, secteur) %>% 
-  write_csv2("data_prod/ee18_extraits_recode.csv")
+       chpub != 7) %>% # et on enlève les salariés de particuliers employeurs
+  write_csv2("data_prod/ee18_interim_recode.csv")

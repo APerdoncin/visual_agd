@@ -246,13 +246,14 @@ resultats_sup %>%
   set_caption("Résultats statistiques variables supplémentaires")
 
 
-write_csv2(resultats_actives, path = "sorties/tab-resultats_actives.csv")
+write_csv2(resultats_sup, path = "sorties/tab-resultats_sup.csv")
 
 # Assemblage du tableau complet de résultats (variables actives et supplémentaires) ----
 
 # On colle les lignes des tableaux contenant tous les résultats statistiques des variables actives et supplémentaires. On a donc dans un seul et même objet toutes les informations nécessaires pour 1/ interpréter correctement les axes et 2/ faire de beaux graphiques !
 
-resultats_complet <- bind_rows(resultats_actives, resultats_sup)
+resultats_complet <- bind_rows(resultats_actives, resultats_sup) %>% 
+  write_csv2(resultats_actives, path = "sorties/tab-resultats_complet.csv")
 
 
 # VISUALISATIONS GRAPHIQUES ----
