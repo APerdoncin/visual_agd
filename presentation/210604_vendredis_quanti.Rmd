@@ -57,7 +57,11 @@ d_acm <- d %>%
 ```
 
 
+<<<<<<< HEAD
 # Introduction
+=======
+# Introduction {-}
+>>>>>>> 91fb04006fb2b736dcb5d5090540fd5fdf1b7cc6
 
 ### Objectifs
 
