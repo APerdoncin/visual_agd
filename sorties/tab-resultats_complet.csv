@@ -1,0 +1,68 @@
+type;variables;modalites;n;pourcentage;dim1_coord;dim1_contrib;dim1_cos2;dim1_vtest;dim2_coord;dim2_contrib;dim2_cos2;dim2_vtest;dim3_coord;dim3_contrib;dim3_cos2;dim3_vtest;dim4_coord;dim4_contrib;dim4_cos2;dim4_vtest
+Variable active;Age;+50a;786;17,0;-0,23;0,41;0,01;-7,09;0,65;4,39;0,09;19,93;-0,17;0,33;0,01;-5,17;0,51;3,20;0,05;15,70
+Variable active;Age;15-29a;1859;40,1;0,20;0,69;0,03;10,88;-0,72;13,00;0,35;-40,39;0,10;0,30;0,01;5,80;-0,13;0,50;0,01;-7,30
+Variable active;Age;30-39a;1116;24,1;-0,06;0,04;0,00;-2,31;0,31;1,38;0,03;11,70;0,10;0,17;0,00;3,81;0,01;0,00;0,00;0,41
+Variable active;Age;40-49a;871;18,8;-0,13;0,15;0,00;-4,32;0,57;3,79;0,08;18,72;-0,20;0,51;0,01;-6,48;-0,19;0,52;0,01;-6,37
+Variable active;Choix du contrat;Contrat choisi;1925;41,6;-0,06;0,06;0,00;-3,17;-0,29;2,19;0,06;-16,77;0,12;0,45;0,01;7,15;0,32;3,18;0,07;18,64
+Variable active;Choix du contrat;Contrat subi;2707;58,4;0,04;0,04;0,00;3,17;0,21;1,56;0,06;16,77;-0,09;0,32;0,01;-7,15;-0,23;2,26;0,07;-18,64
+Variable active;Diplôme;Bac général;251;5,4;0,64;0,99;0,02;10,37;0,02;0,00;0,00;0,32;-1,02;3,97;0,06;-16,67;-1,13;5,06;0,07;-18,48
+Variable active;Diplôme;Bac techno/pro;889;19,2;0,16;0,22;0,01;5,30;-0,87;9,03;0,18;-28,97;0,28;1,07;0,02;9,36;0,03;0,01;0,00;1,06
+Variable active;Diplôme;Brevet collèges ou CEP;358;7,7;0,16;0,08;0,00;3,07;-0,50;1,21;0,02;-9,94;-0,54;1,59;0,02;-10,67;0,10;0,06;0,00;1,96
+Variable active;Diplôme;CAP/BEP;1554;33,5;-0,41;2,60;0,09;-20,04;0,03;0,02;0,00;1,40;-0,15;0,53;0,01;-7,27;0,49;5,95;0,12;23,91
+Variable active;Diplôme;L2 ou équiv;437;9,4;0,44;0,81;0,02;9,59;0,04;0,01;0,00;0,96;0,84;4,62;0,07;18,39;-0,11;0,09;0,00;-2,45
+Variable active;Diplôme;L3 et sup;315;6,8;1,24;4,69;0,11;22,71;0,80;2,66;0,05;14,64;1,87;16,62;0,26;34,38;-0,42;0,88;0,01;-7,75
+Variable active;Diplôme;Sans diplôme;828;17,9;-0,35;1,01;0,03;-11,25;0,77;6,53;0,13;24,44;-0,63;4,95;0,09;-19,98;-0,44;2,54;0,04;-14,04
+Variable active;Genre;Femmes;1355;29,3;0,92;11,24;0,35;40,37;-0,07;0,08;0,00;-2,89;0,14;0,38;0,01;5,99;-0,04;0,04;0,00;-1,95
+Variable active;Genre;Hommes;3277;70,7;-0,38;4,65;0,35;-40,37;0,03;0,03;0,00;2,89;-0,06;0,16;0,01;-5,99;0,02;0,02;0,00;1,95
+Variable active;Souhaite travailler plus;Souhaite pas plus d'heures;3159;68,2;-0,18;0,98;0,07;-17,77;-0,02;0,02;0,00;-2,16;0,22;2,39;0,11;22,34;-0,01;0,01;0,00;-1,36
+Variable active;Souhaite travailler plus;Souhaite plus d'heures;1473;31,8;0,38;2,10;0,07;17,77;0,05;0,04;0,00;2,16;-0,48;5,14;0,11;-22,34;0,03;0,02;0,00;1,36
+Variable active;Horaire de travail;Pas d'horaire habituel;730;15,8;0,39;1,07;0,03;11,41;-0,58;3,29;0,06;-17,14;-0,42;1,96;0,03;-12,40;-0,27;0,85;0,01;-8,02
+Variable active;Horaire de travail;Temps complet -35h;116;2,5;0,33;0,12;0,00;3,60;-0,44;0,30;0,00;-4,79;-0,92;1,48;0,02;-10,05;0,14;0,04;0,00;1,57
+Variable active;Horaire de travail;Temps complet +40h;692;14,9;-0,53;1,87;0,05;-15,00;-0,12;0,13;0,00;-3,40;0,35;1,28;0,02;10,00;0,73;5,74;0,09;20,75
+Variable active;Horaire de travail;Temps complet 35-39h;2712;58,5;-0,24;1,49;0,08;-19,19;0,13;0,64;0,03;10,78;0,16;1,07;0,04;13,08;-0,20;1,69;0,06;-16,12
+Variable active;Horaire de travail;Temps partiel;382;8,2;1,80;12,02;0,29;36,66;0,52;1,35;0,02;10,52;-0,70;2,81;0,04;-14,25;0,57;1,97;0,03;11,70
+Variable active;Nationalité;Etrangers;595;12,8;-0,15;0,14;0,00;-4,05;1,32;13,79;0,26;34,48;-0,51;2,33;0,04;-13,32;-1,09;11,13;0,18;-28,55
+Variable active;Nationalité;Français de naissance;3799;82,0;0,03;0,03;0,00;4,17;-0,28;3,99;0,36;-40,83;0,08;0,38;0,03;11,83;0,14;1,22;0,09;20,78
+Variable active;Nationalité;Français naturalisés;238;5,1;-0,07;0,01;0,00;-1,12;1,19;4,45;0,08;18,78;-0,03;0,00;0,00;-0,40;0,45;0,75;0,01;7,13
+Variable active;Position dans l'emploi;Agents maîtrise, ingénieurs, cadres;119;2,6;0,90;0,95;0,02;9,99;1,09;1,89;0,03;12,06;3,47;21,56;0,32;38,30;-0,46;0,40;0,01;-5,13
+Variable active;Position dans l'emploi;Autres, nr;1012;21,8;0,30;0,91;0,03;10,94;0,07;0,07;0,00;2,61;-0,54;4,43;0,08;-19,38;0,57;5,10;0,09;20,41
+Variable active;Position dans l'emploi;Employés;748;16,1;1,35;13,32;0,35;40,37;0,06;0,04;0,00;1,85;0,08;0,06;0,00;2,26;-0,30;1,03;0,02;-8,87
+Variable active;Position dans l'emploi;Manoeuvres ou OS;1410;30,4;-0,30;1,20;0,04;-13,28;-0,45;3,73;0,09;-20,06;-0,28;1,69;0,03;-12,70;-0,49;5,32;0,11;-22,09
+Variable active;Position dans l'emploi;Ouvriers qual, techniciens d'atelier;1139;24,6;-0,83;7,60;0,22;-32,16;0,30;1,38;0,03;11,71;0,10;0,17;0,00;3,88;0,32;1,82;0,03;12,40
+Variable active;Position dans l'emploi;Techniciens;204;4,4;-0,33;0,22;0,01;-4,86;0,17;0,08;0,00;2,53;1,76;9,58;0,14;25,78;0,15;0,08;0,00;2,26
+Variable active;Public/Privé;Employeur privé;4450;96,1;-0,06;0,14;0,08;-18,84;-0,05;0,14;0,06;-16,26;-0,01;0,01;0,00;-4,65;-0,08;0,47;0,16;-27,50
+Variable active;Public/Privé;Employeur public;182;3,9;1,37;3,32;0,08;18,84;1,18;3,38;0,06;16,26;0,34;0,31;0,00;4,65;2,00;11,38;0,16;27,50
+Variable active;Secteur d'activité;Activ admin scientifqs et technqs;312;6,7;0,69;1,43;0,03;12,53;0,36;0,54;0,01;6,58;0,51;1,23;0,02;9,34;-0,79;3,05;0,05;-14,44
+Variable active;Secteur d'activité;Admin publiques;185;4,0;1,88;6,41;0,15;26,16;0,87;1,85;0,03;12,03;-0,49;0,67;0,01;-6,82;2,03;11,91;0,17;28,14
+Variable active;Secteur d'activité;Autres secteurs;438;9,5;0,36;0,55;0,01;7,90;0,42;1,04;0,02;9,27;0,05;0,01;0,00;1,01;-0,47;1,53;0,02;-10,39
+Variable active;Secteur d'activité;Commerce;488;10,5;0,75;2,66;0,07;17,47;-0,21;0,28;0,00;-4,81;-0,12;0,10;0,00;-2,78;-0,55;2,34;0,04;-12,92
+Variable active;Secteur d'activité;Construction;689;14,9;-1,05;7,45;0,19;-29,97;0,57;2,95;0,06;16,14;0,09;0,08;0,00;2,48;0,15;0,23;0,00;4,15
+Variable active;Secteur d'activité;Energie, eau, déchets, dépol;150;3,2;-0,01;0,00;0,00;-0,13;0,82;1,35;0,02;10,24;0,83;1,56;0,02;10,35;0,14;0,04;0,00;1,72
+Variable active;Secteur d'activité;Fab autres prod indus;788;17,0;-0,46;1,65;0,04;-14,27;-0,58;3,56;0,07;-17,94;0,08;0,07;0,00;2,39;0,26;0,84;0,01;8,03
+Variable active;Secteur d'activité;Fab élec, info, machines;250;5,4;-0,41;0,42;0,01;-6,73;-0,55;0,99;0,02;-8,88;0,45;0,77;0,01;7,34;-0,26;0,27;0,00;-4,28
+Variable active;Secteur d'activité;Fab matériel transp;373;8,1;-0,60;1,33;0,03;-12,18;-0,08;0,03;0,00;-1,62;0,08;0,04;0,00;1,69;-0,42;1,05;0,02;-8,53
+Variable active;Secteur d'activité;Fabrication alimentaire et tabacs;339;7,3;0,09;0,02;0,00;1,65;-0,79;2,78;0,05;-15,01;-0,43;0,93;0,01;-8,16;-0,37;0,71;0,01;-7,00
+Variable active;Secteur d'activité;Héberg et restauration;97;2,1;1,62;2,48;0,06;16,12;-0,12;0,02;0,00;-1,23;-0,30;0,13;0,00;-2,95;-0,24;0,09;0,00;-2,40
+Variable active;Secteur d'activité;Transports et entreposage;523;11,3;0,29;0,42;0,01;6,97;0,06;0,03;0,00;1,49;-0,47;1,76;0,03;-11,47;0,75;4,63;0,07;18,25
+Variable supplémentaire;Groupe socio-professionnel;CPIS;56;1,2;1,04;NA;0,01;7,83;0,93;NA;0,01;7,04;2,33;NA;0,07;17,51;-0,24;NA;0,00;-1,78
+Variable supplémentaire;Groupe socio-professionnel;Employé-e-s;621;13,4;1,47;NA;0,34;39,48;0,08;NA;0,00;2,08;-0,13;NA;0,00;-3,42;0,15;NA;0,00;4,05
+Variable supplémentaire;Groupe socio-professionnel;Ouvriers;3519;76,0;-0,33;NA;0,35;-40,21;-0,08;NA;0,02;-9,61;-0,21;NA;0,14;-25,49;-0,03;NA;0,00;-3,17
+Variable supplémentaire;Groupe socio-professionnel;Professions intermédiaires;436;9,4;0,45;NA;0,02;9,83;0,41;NA;0,02;9,00;1,58;NA;0,26;34,73;0,03;NA;0,00;0,58
+Variable supplémentaire;Type de ménage;Autres ménages;232;5,0;0,08;NA;0,00;1,28;-0,18;NA;0,00;-2,83;-0,21;NA;0,00;-3,26;-0,04;NA;0,00;-0,64
+Variable supplémentaire;Type de ménage;Couple avec enfant(s);2293;49,5;-0,09;NA;0,01;-6,31;-0,01;NA;0,00;-0,83;-0,03;NA;0,00;-1,82;-0,04;NA;0,00;-2,46
+Variable supplémentaire;Type de ménage;Couple sans enfant;711;15,3;0,00;NA;0,00;0,12;0,08;NA;0,00;2,45;0,11;NA;0,00;3,17;0,12;NA;0,00;3,49
+Variable supplémentaire;Type de ménage;Famille monoparentale;648;14,0;0,35;NA;0,02;9,72;-0,19;NA;0,01;-5,29;0,01;NA;0,00;0,31;-0,09;NA;0,00;-2,43
+Variable supplémentaire;Type de ménage;Personne seule;748;16,1;-0,05;NA;0,00;-1,47;0,18;NA;0,01;5,39;0,03;NA;0,00;1,00;0,09;NA;0,00;2,60
+Variable supplémentaire;Catégorie socio-professionnelle;Cadres et autres professions intermédiaires;157;3,4;0,99;NA;0,03;12,61;0,74;NA;0,02;9,45;1,59;NA;0,09;20,31;0,35;NA;0,00;4,48
+Variable supplémentaire;Catégorie socio-professionnelle;Chauffeurs;169;3,6;-0,04;NA;0,00;-0,59;0,19;NA;0,00;2,47;-0,54;NA;0,01;-7,21;0,87;NA;0,03;11,53
+Variable supplémentaire;Catégorie socio-professionnelle;Employés admin du privé;183;4,0;1,23;NA;0,06;17,01;-0,02;NA;0,00;-0,26;0,52;NA;0,01;7,19;-0,39;NA;0,01;-5,32
+Variable supplémentaire;Catégorie socio-professionnelle;Employés commerciaux du privé;165;3,6;1,46;NA;0,08;19,09;-0,40;NA;0,01;-5,21;-0,15;NA;0,00;-2,00;-0,53;NA;0,01;-6,89
+Variable supplémentaire;Catégorie socio-professionnelle;Employés du public;151;3,3;1,59;NA;0,09;19,86;0,70;NA;0,02;8,71;-0,52;NA;0,01;-6,54;1,58;NA;0,08;19,77
+Variable supplémentaire;Catégorie socio-professionnelle;Employés services aux particuliers;122;2,6;1,71;NA;0,08;19,20;0,10;NA;0,00;1,11;-0,58;NA;0,01;-6,44;0,10;NA;0,00;1,13
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers non qual artisanat et agric;320;6,9;-0,15;NA;0,00;-2,80;0,31;NA;0,01;5,73;-0,39;NA;0,01;-7,28;-0,58;NA;0,02;-10,76
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers non qual industrie;1522;32,9;-0,11;NA;0,01;-5,04;-0,48;NA;0,11;-22,79;-0,31;NA;0,05;-14,84;-0,30;NA;0,04;-14,28
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers qual artisanat;430;9,3;-0,86;NA;0,08;-18,81;0,61;NA;0,04;13,31;0,03;NA;0,00;0,66;0,34;NA;0,01;7,41
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers qual industrie;662;14,3;-0,75;NA;0,09;-20,83;0,04;NA;0,00;1,08;0,14;NA;0,00;3,92;0,23;NA;0,01;6,31
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers qual manut, magasin, transport;416;9,0;-0,20;NA;0,00;-4,34;0,07;NA;0,00;1,56;-0,37;NA;0,01;-8,01;0,26;NA;0,01;5,45
+Variable supplémentaire;Catégorie socio-professionnelle;Professions intermédiaires du privé;124;2,7;1,19;NA;0,04;13,44;0,50;NA;0,01;5,68;1,39;NA;0,05;15,67;-0,56;NA;0,01;-6,36
+Variable supplémentaire;Catégorie socio-professionnelle;Technicien-ne-s;211;4,6;-0,23;NA;0,00;-3,47;0,25;NA;0,00;3,70;1,89;NA;0,17;28,05;0,06;NA;0,00;0,92

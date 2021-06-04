@@ -1,5 +1,5 @@
 ---
-title: "Représenter des analyses géométriques de données"
+title: "Représenter des analyses géométriques"
 header-includes:
   - \titlegraphic{\centering \includegraphics[scale = 0.15]{logo-quantigre.png}}
   - \renewcommand{\tablename}{Tableau}
@@ -20,7 +20,7 @@ header-includes:
 lang: "fr"
 subtitle: "Des résultats aux graphiques avec `R/RStudio` et `ggplot2`"
 author: "Anton Perdoncin"
-institute: "ERC Lubartworld, EHESS, Cens"
+institute: "EHESS, Cens"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   beamer_presentation:
@@ -56,12 +56,7 @@ d_acm <- d %>%
   drop_na()
 ```
 
-
-<<<<<<< HEAD
 # Introduction
-=======
-# Introduction {-}
->>>>>>> 91fb04006fb2b736dcb5d5090540fd5fdf1b7cc6
 
 ### Objectifs
 

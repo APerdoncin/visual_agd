@@ -1,0 +1,23 @@
+type;variables;modalites;n;pourcentage;dim1_coord;dim1_cos2;dim1_vtest;dim2_coord;dim2_cos2;dim2_vtest;dim3_coord;dim3_cos2;dim3_vtest;dim4_coord;dim4_cos2;dim4_vtest
+Variable supplémentaire;Groupe socio-professionnel;CPIS;56;1,2;1,04;0,01;7,83;0,93;0,01;7,04;2,33;0,07;17,51;-0,24;0,00;-1,78
+Variable supplémentaire;Groupe socio-professionnel;Employé-e-s;621;13,4;1,47;0,34;39,48;0,08;0,00;2,08;-0,13;0,00;-3,42;0,15;0,00;4,05
+Variable supplémentaire;Groupe socio-professionnel;Ouvriers;3519;76,0;-0,33;0,35;-40,21;-0,08;0,02;-9,61;-0,21;0,14;-25,49;-0,03;0,00;-3,17
+Variable supplémentaire;Groupe socio-professionnel;Professions intermédiaires;436;9,4;0,45;0,02;9,83;0,41;0,02;9,00;1,58;0,26;34,73;0,03;0,00;0,58
+Variable supplémentaire;Type de ménage;Autres ménages;232;5,0;0,08;0,00;1,28;-0,18;0,00;-2,83;-0,21;0,00;-3,26;-0,04;0,00;-0,64
+Variable supplémentaire;Type de ménage;Couple avec enfant(s);2293;49,5;-0,09;0,01;-6,31;-0,01;0,00;-0,83;-0,03;0,00;-1,82;-0,04;0,00;-2,46
+Variable supplémentaire;Type de ménage;Couple sans enfant;711;15,3;0,00;0,00;0,12;0,08;0,00;2,45;0,11;0,00;3,17;0,12;0,00;3,49
+Variable supplémentaire;Type de ménage;Famille monoparentale;648;14,0;0,35;0,02;9,72;-0,19;0,01;-5,29;0,01;0,00;0,31;-0,09;0,00;-2,43
+Variable supplémentaire;Type de ménage;Personne seule;748;16,1;-0,05;0,00;-1,47;0,18;0,01;5,39;0,03;0,00;1,00;0,09;0,00;2,60
+Variable supplémentaire;Catégorie socio-professionnelle;Cadres et autres professions intermédiaires;157;3,4;0,99;0,03;12,61;0,74;0,02;9,45;1,59;0,09;20,31;0,35;0,00;4,48
+Variable supplémentaire;Catégorie socio-professionnelle;Chauffeurs;169;3,6;-0,04;0,00;-0,59;0,19;0,00;2,47;-0,54;0,01;-7,21;0,87;0,03;11,53
+Variable supplémentaire;Catégorie socio-professionnelle;Employés admin du privé;183;4,0;1,23;0,06;17,01;-0,02;0,00;-0,26;0,52;0,01;7,19;-0,39;0,01;-5,32
+Variable supplémentaire;Catégorie socio-professionnelle;Employés commerciaux du privé;165;3,6;1,46;0,08;19,09;-0,40;0,01;-5,21;-0,15;0,00;-2,00;-0,53;0,01;-6,89
+Variable supplémentaire;Catégorie socio-professionnelle;Employés du public;151;3,3;1,59;0,09;19,86;0,70;0,02;8,71;-0,52;0,01;-6,54;1,58;0,08;19,77
+Variable supplémentaire;Catégorie socio-professionnelle;Employés services aux particuliers;122;2,6;1,71;0,08;19,20;0,10;0,00;1,11;-0,58;0,01;-6,44;0,10;0,00;1,13
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers non qual artisanat et agric;320;6,9;-0,15;0,00;-2,80;0,31;0,01;5,73;-0,39;0,01;-7,28;-0,58;0,02;-10,76
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers non qual industrie;1522;32,9;-0,11;0,01;-5,04;-0,48;0,11;-22,79;-0,31;0,05;-14,84;-0,30;0,04;-14,28
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers qual artisanat;430;9,3;-0,86;0,08;-18,81;0,61;0,04;13,31;0,03;0,00;0,66;0,34;0,01;7,41
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers qual industrie;662;14,3;-0,75;0,09;-20,83;0,04;0,00;1,08;0,14;0,00;3,92;0,23;0,01;6,31
+Variable supplémentaire;Catégorie socio-professionnelle;Ouvriers qual manut, magasin, transport;416;9,0;-0,20;0,00;-4,34;0,07;0,00;1,56;-0,37;0,01;-8,01;0,26;0,01;5,45
+Variable supplémentaire;Catégorie socio-professionnelle;Professions intermédiaires du privé;124;2,7;1,19;0,04;13,44;0,50;0,01;5,68;1,39;0,05;15,67;-0,56;0,01;-6,36
+Variable supplémentaire;Catégorie socio-professionnelle;Technicien-ne-s;211;4,6;-0,23;0,00;-3,47;0,25;0,00;3,70;1,89;0,17;28,05;0,06;0,00;0,92

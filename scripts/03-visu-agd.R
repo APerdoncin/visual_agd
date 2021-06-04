@@ -104,8 +104,6 @@ seuil <- 100 / nrow(res_acm$var$coord)
 
 # Première étape : récupérer les fréquences de chaque modalité. ce faisant (grâce à la fonction map), on récupère aussi la liste de toutes les modalités du jeu de données, ainsi que les variables auxquelles elles appartiennent. Ce sera très utile plus bas pour dessiner des symboles différents par variable... 
 
-frequences <- gather(d_acm, names_to = modalites, values_to)
-
 frequences <- d_acm %>% 
   pivot_longer(everything(),
                names_to = "variables", 
