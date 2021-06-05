@@ -12,7 +12,8 @@ destfile <- "archive.zip"
 
 # Télécharger le fichier zip
 
-curl_download(url, destfile = paste(path_zip, destfile, sep = "/"))
+### Enlever le commentaire de la ligne ci-dessous si vous souhaitez télécharger les données par vous-même
+# curl_download(url, destfile = paste(path_zip, destfile, sep = "/"))
 
 # Dé-ziper dans le dossier dat
 
